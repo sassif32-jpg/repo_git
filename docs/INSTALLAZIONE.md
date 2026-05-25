@@ -14,6 +14,5 @@
  1. `cd REPO_GIT`
  2. `cd src`
  
- ![Immagine di un chip e circuiti](assets/immagini/chip.png)
+ ![Immagine di un chip e circuiti](assets/immagini/localhost.png)
 
- 

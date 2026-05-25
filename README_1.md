@@ -26,6 +26,7 @@ aggiungi i file con git add . e salva tutto con git commit.`
 ## Utilizzo
 
 
+ ![Immagine di localhost](assets/immagini/localhost.png)
 
 ## Esempi
 
