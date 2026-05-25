@@ -11,6 +11,12 @@ Scrivere commit sensati
 2. leggibile nella cronologia;
 3. focalizzato su una singola modifica o gruppo logico di modifiche
 
+
+| COMANDO | SIGNIFICATO |
+|---|---|
+| git add . | per aggiungere tutte le modifiche che ho effettuato
+|git commit -m | inserisco la descrizione dell'azione che ho effettuato
+
 ## ESEMPIO:
 
 `git commit -m "Aggiunta sezione installazione al README"`
