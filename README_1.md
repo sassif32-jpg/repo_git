@@ -1,4 +1,4 @@
-\# NOME PROGETTO
+# NOME PROGETTO
 
 
 
