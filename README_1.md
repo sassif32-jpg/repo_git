@@ -2,41 +2,41 @@
 
 
 
-\## Descrizione
+## Descrizione
 
 
 
-\## Obiettivo
+## Obiettivo
 
 
 
-\## Funzionalità principali
+## Funzionalità principali
 
 
 
-\## Requisiti
+## Requisiti
 
 
 
-\## Installazione
+## Installazione
 
 
 
-\## Utilizzo
+## Utilizzo
 
 
 
-\## Esempi
+## Esempi
 
 
 
-\## Struttura del progetto
+## Struttura del progetto
 
 
 
-\## Autori
+## Autori
 
 
 
-\## Licenza
+## Licenza
 
