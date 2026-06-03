@@ -55,6 +55,16 @@ body {
     background-color: beige;
 }
 
-main {
+nav {
+    display: flex; gap: 16px;
+    background: #111
+}
+
+nav a {
+    margin: 10px auto;
+    color: white;
+    text-decoration: black;
+    
+    main {
     font-family: 'Courier New', Courier, monospace;
 }

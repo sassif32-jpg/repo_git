@@ -1,7 +1,5 @@
 # NOME PROGETTO
 
-
-
 ## Descrizione
 
 `Per controllare lo stato della repository usa git status. Poi aggiungi i file con git add . e salva  tutto con git commit.`
@@ -11,7 +9,7 @@
 ![Immagine di localhost](assets/immagini/localhost.png)
 
 ## Documentazione
-- [Installazione](/docs/installazione.md)
+- [Installazione](docs/installazione.md)
 - [Quick-start](docs/quick-start.md)
 - [FAQ](docs/faq.md)
 - [Troubleshooting](docs/troubleshooting.md)
