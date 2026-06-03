@@ -1,0 +1,60 @@
+h1
+    {
+        color:brown;
+        font-family:'Courier New', Courier, monospace;
+        text-align: center;
+    }
+h2, footer
+    {
+        color:blueviolet;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.5rem;
+    }
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+li {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ol {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+th {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+td {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cards {
+    display: flex;
+    gap: 16px;
+}
+.card {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    width: 500px;
+    text-align: left
+}
+
+body {
+    background-color: beige;
+}
+
+main {
+    font-family: 'Courier New', Courier, monospace;
+}
