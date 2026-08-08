@@ -44,6 +44,12 @@ td {
     padding: 80px 0;
 }
 
+.card h2, .card h3 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .card img {
     height: 220px;
     object-fit: cover;
@@ -59,6 +65,38 @@ td {
     margin-bottom: 16px;
     width: 500px;
     text-align: left
+}
+
+.section.class-card, .card {
+    border: 2px solid #dfd8a3;
+    background-color:  #fcfbe3;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-in-out;
+}
+
+.section.class-card:hover, .card:hover {
+    border-color: #ff0000; /* Diventa rosso "Minaccia/Target" */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); /* Bagliore digitale */
+    transform: scale(1.02); /* Leggero zoom di puntamento computerizzato */
+}
+
+.section.class-card::before, .card::before {
+    content: "◢";
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    font-size: 10px;
+    color: #ff0000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.section.class-card:hover::before, .card:hover::before {
+    opacity: 1;
 }
 
 div {
