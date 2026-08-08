@@ -1,47 +1,69 @@
-h1
-    {
-        color:brown;
-        font-family:'Courier New', Courier, monospace;
-        text-align: center;
-    }
-h2, footer
-    {
-        color:blueviolet;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 1.5rem;
-    }
-p {
+/* 1. SELETTORI GLOBALI (Font unico stile terminale per tutti) */
+body, p, a, li, ol, ul, th, td, main {
     font-family: 'Courier New', Courier, monospace;
 }
 
-a {
-    font-family: 'Courier New', Courier, monospace;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f5db; /* Sfondo crema unico coordinato alla griglia */
+    background-image: 
+        linear-gradient(rgba(223, 216, 163, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(223, 216, 163, 0.3) 1px, transparent 1px);
+    background-size: 40px 40px; 
+    background-position: center; 
 }
 
-li {
-    font-family: 'Courier New', Courier, monospace;
+/* Elementi generici generano un blocco unico */
+div {
+    background-color: beige;
 }
 
-ol {
-    font-family: 'Courier New', Courier, monospace;
+/* 2. TITOLI E TIPOGRAFIA (Font Consolas stile codice) */
+h1, h2, h3 {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-weight: bold;
 }
 
-ul {
-    font-family: 'Courier New', Courier, monospace;
+h1 {
+    color: brown;
+    text-align: center;
 }
 
-th {
-    font-family: 'Courier New', Courier, monospace;
+h2, footer {
+    color: blueviolet;
+    font-size: 1.5rem;
 }
 
-td {
-    font-family: 'Courier New', Courier, monospace;
+/* 3. STRUTTURA NAVIGAZIONE */
+nav {
+    display: flex; 
+    gap: 16px;
+    background: #111;
 }
 
+nav a {
+    margin: 10px auto;
+    color: white;
+    text-decoration: none; /* Corretto da "black" a "none" per togliere la sottolineatura */
+}
+
+/* 4. SEZIONE HERO EXTRACUSTOM */
 .hero-custom {
     background: linear-gradient(135deg, beige, #333);
     color: purple;
     padding: 80px 0;
+}
+
+/* 5. CONTENITORI CARDS (LAYOUT) */
+.cards {
+    display: flex;
+    gap: 16px;
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
 }
 
 .card h2, .card h3 {
@@ -50,40 +72,30 @@ td {
     letter-spacing: 2px;
 }
 
-.card img {
-    height: 220px;
-    object-fit: cover;
-}
-.cards {
-    display: flex;
-    gap: 16px;
-}
-.card {
-    border: 1px solid #000;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    width: 500px;
-    text-align: left
-}
-
+/* 6. RIQUADRI PERSONAGGI CON EFFETTO TRACCIAMENTO SATELLITARE */
 .section.class-card, .card {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-weight: bold;
     border: 2px solid #dfd8a3;
-    background-color:  #fcfbe3;
+    background-color: #fcfbe3;
     padding: 20px;
     margin: 15px;
     border-radius: 4px;
     position: relative;
     box-shadow: 0 0 0px rgba(0, 0, 0, 0);
     transition: all 0.3s ease-in-out;
+    width: 500px;
+    text-align: left;
 }
 
+/* Hover: il tracciamento aggancia la minaccia */
 .section.class-card:hover, .card:hover {
-    border-color: #ff0000; /* Diventa rosso "Minaccia/Target" */
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); /* Bagliore digitale */
-    transform: scale(1.02); /* Leggero zoom di puntamento computerizzato */
+    border-color: #ff0000; 
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); 
+    transform: scale(1.02); 
 }
 
+/* Mirino di puntamento */
 .section.class-card::before, .card::before {
     content: "◢";
     position: absolute;
@@ -99,93 +111,22 @@ td {
     opacity: 1;
 }
 
-div {
-    background-color: beige;
-}
-body {
-    background-color: beige;
-}
-
-nav {
-    display: flex; gap: 16px;
-    background: #111
-}
-
-nav a {
-    margin: 10px auto;
-    color: white;
-    text-decoration: black;
-}
-    main {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/* 1. APPLICA IL FONT DA TERMINALE A TUTTA LA PAGINA */
-body {
-    font-family: 'Courier New', Courier, monospace; /* Font a spaziatura fissa stile codice */
-    background-color: #f7f5db; /* Mantiene il tuo sfondo crema */
-    margin: 0;
-    padding: 0;
-}
-
-/* Rende i titoli ancora più simili a stringhe di un computer */
-h1, h2, h3, .card {
-    font-family: 'Consolas', 'Monaco', monospace;
-    font-weight: bold;
-}
-
-/* 2. CREA LA BARRA DI CARICAMENTO ROSSA IN CIMA */
+/* 7. BARRA DI CARICAMENTO ROSSA INTERFACCIA MACCHINA */
 .loading-bar {
     position: fixed;
     top: 0;
     left: 0;
     height: 4px;
-    background-color: #ff0000; /* Rosso "Minaccia" */
+    background-color: #ff0000; 
     box-shadow: 0 0 10px #ff0000;
     z-index: 9999;
-    animation: machineScan 3s linear infinite; /* Animazione continua */
+    animation: machineScan 3s linear infinite; 
 }
 
-/* Animazione che simula il caricamento dei dati e della scansione */
 @keyframes machineScan {
-    0% {
-        width: 0%;
-        opacity: 1;
-    }
-    40% {
-        width: 70%;
-    }
-    70% {
-        width: 100%;
-        opacity: 1;
-    }
-    90% {
-        width: 100%;
-        opacity: 0; /* Scompare per un attimo quando finisce */
-    }
-    100% {
-        width: 0%;
-        opacity: 0;
-    }
-}
-
-/* SFONDO CON GRIGLIA SATELLITARE STILE POI */
-body {
-    font-family: 'Courier New', Courier, monospace;
-    margin: 0;
-    padding: 0;
-    
-    /* Mantiene il tuo colore crema di base */
-    background-color: #f7f5db; 
-    
-    /* Genera linee orizzontali e verticali sottili */
-    background-image: 
-        linear-gradient(rgba(223, 216, 163, 0.3) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(223, 216, 163, 0.3) 1px, transparent 1px);
-    
-    /* Definisce la dimensione dei quadrati della griglia (40px x 40px) */
-    background-size: 40px 40px; 
-    
-    /* Centra la griglia nella schermata */
-    background-position: center; 
+    0% { width: 0%; opacity: 1; }
+    40% { width: 70%; }
+    70% { width: 100%; opacity: 1; }
+    90% { width: 100%; opacity: 0; }
+    100% { width: 0%; opacity: 0; }
 }
