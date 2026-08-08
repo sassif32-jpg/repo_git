@@ -168,3 +168,24 @@ h1, h2, h3, .card {
         opacity: 0;
     }
 }
+
+/* SFONDO CON GRIGLIA SATELLITARE STILE POI */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    
+    /* Mantiene il tuo colore crema di base */
+    background-color: #f7f5db; 
+    
+    /* Genera linee orizzontali e verticali sottili */
+    background-image: 
+        linear-gradient(rgba(223, 216, 163, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(223, 216, 163, 0.3) 1px, transparent 1px);
+    
+    /* Definisce la dimensione dei quadrati della griglia (40px x 40px) */
+    background-size: 40px 40px; 
+    
+    /* Centra la griglia nella schermata */
+    background-position: center; 
+}
