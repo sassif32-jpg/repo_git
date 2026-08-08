@@ -119,3 +119,52 @@ nav a {
     main {
     font-family: 'Courier New', Courier, monospace;
 }
+
+/* 1. APPLICA IL FONT DA TERMINALE A TUTTA LA PAGINA */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Font a spaziatura fissa stile codice */
+    background-color: #f7f5db; /* Mantiene il tuo sfondo crema */
+    margin: 0;
+    padding: 0;
+}
+
+/* Rende i titoli ancora più simili a stringhe di un computer */
+h1, h2, h3, .card {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-weight: bold;
+}
+
+/* 2. CREA LA BARRA DI CARICAMENTO ROSSA IN CIMA */
+.loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background-color: #ff0000; /* Rosso "Minaccia" */
+    box-shadow: 0 0 10px #ff0000;
+    z-index: 9999;
+    animation: machineScan 3s linear infinite; /* Animazione continua */
+}
+
+/* Animazione che simula il caricamento dei dati e della scansione */
+@keyframes machineScan {
+    0% {
+        width: 0%;
+        opacity: 1;
+    }
+    40% {
+        width: 70%;
+    }
+    70% {
+        width: 100%;
+        opacity: 1;
+    }
+    90% {
+        width: 100%;
+        opacity: 0; /* Scompare per un attimo quando finisce */
+    }
+    100% {
+        width: 0%;
+        opacity: 0;
+    }
+}
